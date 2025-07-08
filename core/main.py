@@ -1,1 +1,3 @@
-# this is starting point of early vrsions this code will use abstractions made in features folder
+from request import Request
+r = Request(1, 'yicvc863vuycueqwcvwq', 'start')
+r.process()
