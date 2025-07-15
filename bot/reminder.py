@@ -5,7 +5,7 @@ import asyncio
 import os
 
 # Replace with your actual bot token
-BOT_TOKEN = "7078547195:AAEJGnfgdabtfp4diTL0JtY8_ayoIm3r89I"
+BOT_TOKEN = "8167209179:AAFxbGiSBKB9gaynjeygacUA_yClR6Mza08"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
