@@ -3,6 +3,7 @@ from aiogram.types import Message
 from aiogram.filters import CommandStart, Command
 import asyncio
 from features.features import Features
+from core import button
 class Botl:
 	def __init__(self, id, token, features, messages):
 		self.id = id
@@ -10,8 +11,9 @@ class Botl:
 		self.messages = messages
 		self.state = ''
 		self.context = {}
-		self.commandhandlers = {}
+		self.commandhandlers = {} 
 		self.bot = Bot(token=token)
+  
 		self.dp = Dispatcher()
 
 		
@@ -25,5 +27,5 @@ class Botl:
 		if props[0][0] == '/':
 			@self.dp.message(Command(props[0][1:]))
 			async def _(message:Message):
-				await message.answer(props[1]())
+				await message.answer(props[1](), reply_markup=button.Buttons([button.Button('start now', '1'), button.Button('free', '2'), button.Button('easy', '3')], [2, 1]).keyboard)
 		self.commandhandlers[props[0]] = props[1]
