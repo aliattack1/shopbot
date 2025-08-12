@@ -4,6 +4,8 @@ class Button:
     def __init__(self, text, callback):
         self.text = text
         self.callback = callback
+    def __repr__(self):
+        return self.text + '///' + self.callback
 
 class Buttons:
     def __init__(self, buttons, rows):
